@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addSmurf, setError } from '../actions';
 
 const AddForm = () => {
+	const error = useSelector((state) => state.error);
 	const dispatch = useDispatch();
 
 	const initialState = {
@@ -77,13 +78,13 @@ const AddForm = () => {
 						id='description'
 					/>
 				</div>
-				{errorMessage && (
+				{error && (
 					<div
 						data-testid='errorAlert'
 						className='alert alert-danger'
 						role='alert'
 					>
-						Error: {errorMessage}
+						Error: {error}
 					</div>
 				)}
 				<button>Submit Smurf</button>
