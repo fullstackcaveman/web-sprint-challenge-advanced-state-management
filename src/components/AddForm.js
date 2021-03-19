@@ -6,7 +6,13 @@ const AddForm = () => {
 	const error = useSelector((state) => state.error);
 	const dispatch = useDispatch();
 
+	// Sets submitted Smurf's id in initialState
+	const setId = () => {
+		return JSON.stringify(Date.now());
+	};
+
 	const initialState = {
+		id: setId(),
 		name: '',
 		position: '',
 		nickname: '',
@@ -24,15 +30,17 @@ const AddForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		// Sets error if form name, position, or nickname field is empty
 		if (state.name === '' || state.position === '' || state.nickname === '') {
 			dispatch(setError('Name, position and nickname fields are required.'));
 		} else {
+			// Calls addSmurf action and passes form data into it
 			dispatch(addSmurf(state));
+
+			// Resets form to initial state
 			setState(initialState);
 		}
 	};
-
-	const errorMessage = '';
 
 	return (
 		<section>
@@ -94,9 +102,3 @@ const AddForm = () => {
 };
 
 export default AddForm;
-
-//Task List:
-//1. Connect the errorMessage, setError and addSmurf actions to the AddForm component.
-//2. Replace all instances of the errorMessage static variable with your error message state value.
-//3. Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
-//4. Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
