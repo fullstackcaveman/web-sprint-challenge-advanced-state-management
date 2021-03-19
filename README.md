@@ -31,10 +31,10 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 
 ### Task 2: CodeGrade Setup
 
-- [ ] Open the assignment in Canvas and following along with the attached document [here.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374).
-- [ ] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
-- [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [x] Open the assignment in Canvas and following along with the attached document [here.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374).
+- [x] Follow instructions to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>`.
+- [x] Push your first commit: `git commit --allow-empty -m "first commit" && git push`
+- [x] Check to see that Codegrade has accepted your git submission.
 
 ### Task 3: Project Requirements
 
@@ -80,9 +80,9 @@ Connect this component to redux **passing in your fetchSmurfs action only.**
 
 Connect this component to redux, **passing in your smurf array and loading status state values.**
 
-- [ ] Connect the smurfs and loading state values to the SmurfList component.
-- [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
-- [ ] Replace the static isLoading variable with the state loading variable.
+- [x] Connect the smurfs and loading state values to the SmurfList component.
+- [x] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+- [x] Replace the static isLoading variable with the state loading variable.
 
 #### components/Smurf.js
 
@@ -95,7 +95,7 @@ Connect this component to redux **passing in your error message state value, set
 - [ ] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
 - [ ] Replace all instances of the errorMessage static variable with your error message state value.
 - [ ] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
-- [ ] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
+- [x] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
 
 **Notes:**
 
