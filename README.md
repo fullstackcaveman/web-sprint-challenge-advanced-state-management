@@ -66,7 +66,7 @@ Connect your application to reducer through redux with the thunk and logger midd
 Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
 
 - [x] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retreive smurfs from our server, saves the result of that call to our state and shows an error if one is made.
-- [ ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
+- [x] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
 - [ ] Add a standard action that allows us to set the value of the error message slice of state.
 
 #### App.js
@@ -92,9 +92,9 @@ You do not need to modify this component.
 
 Connect this component to redux **passing in your error message state value, setError action and addSmurf action.** Complete the form handling code.
 
-- [ ] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
-- [ ] Replace all instances of the errorMessage static variable with your error message state value.
-- [ ] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
+- [x] Connect the errorMessage, setError and addSmurf actions to the AddForm component.
+- [x] Replace all instances of the errorMessage static variable with your error message state value.
+- [x] Within the handleSubmit function, replace the static assignment to errorMessage with a call to the setError action. Test that an error is displayed when this validation code fails.
 - [x] Within the handleSubmit function, call your addSmurf action with the smurf name, position, nickname and summury passed as arguments. Test that a smurf is correctly added to when the form is submitted.
 
 **Notes:**

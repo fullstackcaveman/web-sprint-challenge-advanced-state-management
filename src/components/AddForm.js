@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addSmurf, setError } from '../actions';
 
-const AddForm = (props) => {
-	const error = useSelector((state) => state.error);
+const AddForm = () => {
 	const dispatch = useDispatch();
 
 	const initialState = {
@@ -25,7 +24,7 @@ const AddForm = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (state.name === '' || state.position === '' || state.nickname === '') {
-			errorMessage = 'Name, position and nickname fields are required.';
+			dispatch(setError('Name, position and nickname fields are required.'));
 		} else {
 			dispatch(addSmurf(state));
 			setState(initialState);
